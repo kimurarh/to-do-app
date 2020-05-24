@@ -1,0 +1,116 @@
+html {
+    background-color: #1d1e22;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    color: white;
+    font-size: 300%;
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 20px 0;
+    text-align: center;
+}
+
+#creationBox {
+    margin: 0 auto;
+    padding: 0;
+    width: 421px;
+    background-color: red;
+}
+
+#newObjective {
+    width: 250px;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 3px;
+    float: left;
+}
+
+#priorities {
+    height: 30px;
+    float: left;
+    margin-left: 5px;
+}
+
+#addButton {
+    height: 30px;
+    float: left;
+    margin-left: 5px;
+}
+
+.clear {
+    clear: both;
+}
+
+#menu {
+    background-color: green;
+}
+
+.menuTab {
+    float: left;
+    font-weight: bold;
+    text-align: center;
+    width: 33%;
+    padding:20px 0;
+}
+
+#lowTab {
+    color: #FFDC00;
+}
+
+#mediumTab {
+    color: #FF851B;
+}
+
+#highTab {
+    color: #FF4136;
+}
+
+.contentBox {
+    width: 33%;
+    float: left;
+    font-weight: bold;
+    height: 70%;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.objBox {
+    background-color: white;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding: 15px;
+    width: 70%;
+    margin: 4px auto;
+    position: relative;
+}
+
+.removeIcon {
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+}
+
+.completed {
+    background-color: #2ecc40 !important;
+}
+
+.lowPriority {
+    background-color: #FFDC00;
+}
+
+.mediumPriority {
+    background-color: #FF851B;
+}
+
+.highPriority {
+    background-color: #FF4136;
+}
+
