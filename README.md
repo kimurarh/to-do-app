@@ -7,4 +7,9 @@ Simple implementation of an To-Do List App.
 
 [Preview](https://kimurarh.github.io/to-do-list/)
 
+## Technologies
 
+* HTML
+* CSS
+* JavaScript
+* jQuery
