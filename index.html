@@ -11,47 +11,18 @@
     </head>
 
     <body>
+        <div class="container">
+            <h2 class="color-change">To-Do List</h2>
+            <div class="menu">
+                <input type="text" name="add" id="new-task" placeholder="new task">
+                <button id="new-task-button">+</button>
+            </div> 
 
-        <div id="header">
-            To-Do App
-        </div>
-
-        <div id="creationBox">
-            <input id="newObjective" type="text" placeholder="New Task">
-            <select id="priorities" name="priorities">
-                <option value="low">Low</option>
-                <option value="medium">Medium</option>
-                <option value="high">High</option>
-            </select>
-            <button id="addButton">Add</button>
-        </div>
-
-        <div class="clear"></div>
-
-        <div id="menu">
-            <div class="menuTab" id="lowTab">Low Priority</div>            
-            <div class="menuTab" id="mediumTab">Medium Priority</div>            
-            <div class="menuTab" id="highTab">High Priority</div>            
-        </div>
-
-        <div class="clear"></div>
-
-        <div id="main">
-            <div id="lowBox" class="contentBox">
-           
-            </div>
-
-            <div id="mediumBox" class="contentBox">
-
-            </div>
-
-            <div id="highBox" class="contentBox">
-
-            </div>
+            <div id="task-box">
+                <!-- Where new tasks will be added-->
+            </div> 
         </div>
 
         <script type="text/javascript" src="js/todo.js"></script>
-
     </body>
-
 </html>

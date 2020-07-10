@@ -1,58 +1,35 @@
 
+$(function() {
 
-$(document).ready(function(){
+    function addNewTask() {
+        var taskInput = document.getElementById("new-task");
+        var taskBox = document.getElementById("task-box");
 
-    function checkStatus() {
-        $(".objBox").click(function() {
-            $(this).addClass("completed");
-        });
-        $(".removeIcon").click(function() {
-            $(this).parent().remove();
-        })
-    }
-
-    /* Function to add new objective*/
-    function AddNewObjective() {
-        var newObjective = "<div class='objBox'>" + $("#newObjective").val() + "<img class='removeIcon' src='imgs/closeButton.png'></div>";
-
-        var priority = $("#priorities").val();
-
-        if ($("#newObjective").val() != "") {
-            switch(priority) {
-                case "low":
-                    $("#lowBox").append(newObjective);
-                    $("#lowBox").children('div').addClass("lowPriority");
-                    break; 
-                case "medium":
-                    $("#mediumBox").append(newObjective);
-                    $("#mediumBox").children('div').addClass("mediumPriority");
-                    break; 
-                case "high":
-                    $("#highBox").append(newObjective);
-                    $("#highBox").children('div').addClass("highPriority");
-                    break;
-            };
-        } else {
-            alert("Type a task");
+        if (taskInput.value != "") {
+            taskBox.innerHTML += "<div class='task'>" + taskInput.value + "<div class='close-icon'><span class='tooltip-text'>close</span></div></div>"
         }
-        $("#newObjective").val("");
+        taskInput.value = "";
 
-        checkStatus();
+        function checkTask() {
+            $(".close-icon").click(function() {
+                $(this).parent().remove();
+            });
+
+            $(".task").click(function() {
+                $(this).toggleClass("done");
+            })
+        }
+
+        checkTask();
     }
 
-    /* Trigger function when 'Add' button is clicked */
-    $("#addButton").click(function() {
-        AddNewObjective();
-    });
+    // Add text when button is clicked
+    $("#new-task-button").click(() => addNewTask());
 
-    /* Trigger the function when 'Enter' is pressed */
-    $("#newObjective").keypress(function(event) {
-        var keyPressed = event.which;
-        if (keyPressed == 13) {
-            AddNewObjective();
+    // Trigger add button when 'Enter' is pressed 
+    $("#new-task").keyup(function(event) {
+        if (event.keyCode === 13) {
+            $("#new-task-button").click();
         }
     })
-
-
-});
-
+})
